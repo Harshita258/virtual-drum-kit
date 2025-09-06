@@ -1,0 +1,89 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1d1d1d, #444);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Header */
+header {
+  padding: 20px;
+  background: #222;
+  border-bottom: 2px solid #ffcc00;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Drum Container */
+.drum-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.drum {
+  width: 100px;
+  height: 100px;
+  background: #333;
+  border: 2px solid #ffcc00;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.drum span {
+  font-size: 0.8rem;
+  color: #ffcc00;
+  margin-top: 5px;
+}
+
+.drum:active,
+.drum.playing {
+  transform: scale(1.1);
+  background: #ffcc00;
+  color: #000;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  padding: 15px;
+  background: #222;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .drum {
+    width: 80px;
+    height: 80px;
+    font-size: 1.2rem;
+  }
+}

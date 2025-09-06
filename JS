@@ -1,0 +1,37 @@
+// Map keys to sound files
+const soundMap = {
+  "A": "kick.wav",
+  "S": "snare.wav",
+  "D": "hihat.wav",
+  "F": "tom.wav",
+  "G": "crash.wav",
+  "H": "ride.wav"
+};
+
+// Play sound on key press
+window.addEventListener("keydown", (e) => {
+  const key = e.key.toUpperCase();
+  playSound(key);
+});
+
+// Play sound on click
+document.querySelectorAll(".drum").forEach(drum => {
+  drum.addEventListener("click", () => {
+    const key = drum.getAttribute("data-key");
+    playSound(key);
+  });
+});
+
+function playSound(key) {
+  if (soundMap[key]) {
+    const audio = new Audio(`sounds/${soundMap[key]}`);
+    audio.currentTime = 0; // restart sound
+    audio.play();
+
+    const drum = document.querySelector(`.drum[data-key="${key}"]`);
+    if (drum) {
+      drum.classList.add("playing");
+      setTimeout(() => drum.classList.remove("playing"), 200);
+    }
+  }
+}

@@ -1,0 +1,34 @@
+# Virtual Drum Kit 🎶
+
+A simple web-based drum kit built using **HTML, CSS, and JavaScript**.  
+Press the mapped keys or click on the pads to play drum sounds.
+
+---
+
+## 🔑 Key Mappings
+- **A** → Kick  
+- **S** → Snare  
+- **D** → Hi-Hat  
+- **F** → Tom  
+- **G** → Crash  
+- **H** → Ride  
+
+---
+
+## 📱 Responsiveness
+- Works on **desktop, tablet, and mobile**.
+- Pads shrink in size for smaller devices.
+
+---
+
+## 🎨 Design Choices
+- Dark background with yellow accents for a professional look.
+- Minimalistic layout: header, main drum pads, and footer.
+- Highlight effect (`.playing`) when a drum is triggered.
+
+---
+
+## 🚀 How to Run
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/drum-kit.git
